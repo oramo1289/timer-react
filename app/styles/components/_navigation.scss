@@ -1,0 +1,17 @@
+.top-bar, .top-bar ul{
+  background-color: $nav-background;
+}
+
+.top-bar{
+  .menu-text{
+    color: $nav-text-color;
+  }
+  .menu > .menu-text > a{
+    display: inline;
+    padding: 0;
+  }
+}
+
+
+//differenc e between ul>li{...} to ul li{...} is because the first one is referring to the child of the parent and the second i the descendant of the parent,
+//it means the childs are the inmediate ones an the descendants are everyone

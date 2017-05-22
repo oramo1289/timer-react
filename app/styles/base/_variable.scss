@@ -1,0 +1,11 @@
+//aqui crearemos las variables que utilizaremos en loas archivos qeu estan en la carpeta componentes que al final se haran uno cuando los importe a app.scss
+//los archivos inician su nombre con '_' porque de esta manera le decimos a scss que este archivo es un parcial y se usa normalmente con otros archivos
+
+
+//colors
+$grey: #333333;
+$white: #fff;
+
+//navigation colors
+$nav-background: $grey;
+$nav-text-color: $white;
