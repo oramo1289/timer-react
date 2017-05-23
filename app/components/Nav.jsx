@@ -9,10 +9,10 @@ var Nav = () => {
           <ul className="menu">
             <li className="menu-text">React Timer</li>
             <li className="">
-              <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
+              <IndexLink to="/" activeClassName="active-link" >Timer</IndexLink>
             </li>
             <li className="">
-              <IndexLink to="/" activeClassName="active-link">Countdown</IndexLink>
+              <IndexLink to="countdown" activeClassName="active-link" >Countdown</IndexLink>
             </li>
           </ul>
         </div>
