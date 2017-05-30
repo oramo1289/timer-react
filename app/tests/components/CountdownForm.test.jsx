@@ -6,7 +6,7 @@ var $ = require('jQuery');
 
 var CountdownForm = require('./../../components/CountdownForm');
 
-describe('Countdown', () => {
+describe('CountdownForm', () => {
   it('should exist', ()=>{
     expect(CountdownForm).toExist();
   });
