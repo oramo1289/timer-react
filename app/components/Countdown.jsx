@@ -10,7 +10,7 @@ var Countdown = React.createClass({
       countdownStatus: 'stopped'
     };
   },
-  componentDidUpdate: function (prevProps, prevState) { //esta función corre cuando se actualizo props o state
+  componentDidUpdate: function (prevProps, prevState) { //esta función corre inmediatamente después cuando se actualizo el compoenente (props o state)
     if (this.state.countdownStatus !== prevState.countdownStatus) {
       switch (this.state.countdownStatus) {
         case 'started':
@@ -25,12 +25,30 @@ var Countdown = React.createClass({
       }
     }
   },
+  // componentWillUpdate:function (nextProps, nextState) {//es llamado justo antes de que se vaya a actualizar el componente y recibe nextProps y nextState como argumentos
+  //
+  // },
+  // componentWillMount: function () {//es llamado justo antes de que el componente se cargue
+  //   console.log('componentWillMount');
+  // },
+  // componentDidMount: function () { // es llamado justo después de que el compoennte es mostrado
+  //   console.log('componentDidMount');
+  // },
+  componentWillUnmount: function () { //life cycle component este se activa justo antes de que el componente sea removido del DOM
+    //console.log('componentDidUnmount');
+    clearInterval(this.timer)//rompe el intervalo creado en startTimer
+    this.timer = undefined;
+  },
   startTimer: function () {
     this.timer = setInterval(() => {
       var newCount = this.state.count - 1;
       this.setState({
         count: newCount >= 0 ? newCount : 0
       })
+
+      if (newCount === 0) {
+        this.setState({countdownStatus: 'stopped'})
+      }
     }, 1000);
   },
   handleSetCountdown: function (seconds) {

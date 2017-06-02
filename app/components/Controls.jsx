@@ -11,6 +11,9 @@ var Controls = React.createClass({
    }
  },
  //currying function es una funcion que genera otra función cuando pasa el evento desigando
+ // componentWillReceiveProps: function (newProps) {
+ //   console.log('componentWillReceiveProps', newProps.countdownStatus);
+ // },
  render: function () {
    var {countdownStatus} = this.props;
    var renderStartStopButton = () => {
