@@ -16,6 +16,18 @@ require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 require('applicationStyles');
 
 //var firstName = "Oscar";
+//Object Spread Operator
+// let user = {
+//   name: 'Oscar',
+//   city: 'México'
+// }
+//
+// let person = {
+//   ...user,
+//   age: 25
+// }
+//
+// console.log(person);
 
 ReactDOM.render(
   <Router history={hashHistory}>

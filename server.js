@@ -9,6 +9,7 @@ app.use(express.static('public'));
 // });
 // $env:NODE_ENV="development"
 
+
 app.use(function (req, res, next){
   if (req.headers['x-forwarded-proto'] === 'http') {
     next();
